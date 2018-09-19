@@ -20,11 +20,7 @@
 #include "Marine.h"
 #include "Zergling.h"
 using namespace std;
-int marineSize = 10;
-int zergSize = 20;
-Marine squad[10];
-Zergling swarm[20];
-bool marineAlive(Marine * squadarr, size_t numofmarines)
+bool marineAlive(int marineSize)
 {
 	if (marineSize >= 0) {
 		return true;
@@ -32,7 +28,7 @@ bool marineAlive(Marine * squadarr, size_t numofmarines)
 }
 
 // Is there a zergling Alive
-bool zerglingAlive(Zergling * swarmArr, size_t numofZerg)
+bool zerglingAlive(int zergSize)
 {
 	if (zergSize >= 0) {
 		return true;
@@ -48,9 +44,9 @@ int main() {
 
 	cout << "A squad of marines approaches a swarm of Zerglings and opens fire! The Zerglings charge!" << endl;
 	// Attack each other until only one team is left alive
-	while (marineAlive(squad, marineSize) && zerglingAlive(swarm, zergSize)) // If anyone is left alive to fight . . .
+	while (marineAlive(marineSize) && zerglingAlive(zergSize)) // If anyone is left alive to fight . . .
 	{
-		if (marineAlive(squad, marineSize)) // if there's at least one marine alive
+		if (marineAlive(marineSize)) // if there's at least one marine alive
 		{
 			for (size_t i = 0; i < marineSize; i++) // go through the squad
 			{
@@ -71,7 +67,7 @@ int main() {
 				}
 			}
 		}
-		if (zerglingAlive(swarm, zergSize)) // if there's at least one zergling alive
+		if (zerglingAlive(zergSize)) // if there's at least one zergling alive
 		{
 			for (size_t i = 0; i < zergSize; i++) // loop through zerglings
 			{

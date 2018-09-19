@@ -1,2 +1,4 @@
-﻿  Marine.cpp
+﻿  Main.cpp
+c:\users\s189067\downloads\debugexerciseproject\debugging exercise\main.cpp(28): warning C4715: 'marineAlive': not all control paths return a value
+c:\users\s189067\downloads\debugexerciseproject\debugging exercise\main.cpp(36): warning C4715: 'zerglingAlive': not all control paths return a value
   Debugging Exercise.vcxproj -> C:\Users\s189067\Downloads\debugExerciseProject\x64\Debug\Debugging Exercise.exe
